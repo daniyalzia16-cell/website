@@ -23,8 +23,8 @@
    ========================================================================== */
 
 const SITE = {
-  name: "Daniayal Ahmad Khan",
-  shortName: "Dania",
+  name: "Danial",
+  shortName: "Danial",
   role: "AI Video Creator",
   headline: "Bringing Ideas to Life with AI",
   intro:
@@ -105,8 +105,8 @@ const trendingTopics = [
    -------------------------------------------------------------------------- */
 const about = {
   paragraphs: [
-    "Dania is an AI video creator who turns ideas into cinematic, emotionally engaging visuals using the latest generative AI tools. Her work blends filmmaking instincts — composition, lighting, pacing and sound — with the limitless possibilities of AI.",
-    "From trending short-form concepts to brand commercials and experimental art pieces, she focuses on creative AI-generated visual content that feels intentional, polished and unmistakably modern.",
+    "Danial is an AI video creator who turns ideas into cinematic, emotionally engaging visuals using the latest generative AI tools. Each piece blends filmmaking instincts — composition, lighting, pacing and sound — with the limitless possibilities of AI.",
+    "From trending short-form concepts to brand commercials and experimental art pieces, Danial focuses on creative AI-generated visual content that feels intentional, polished and unmistakably modern.",
   ],
   stats: [
     { value: "100+", label: "AI videos created" },
