@@ -23,7 +23,7 @@
    ========================================================================== */
 
 const SITE = {
-  name: "Danial Ahmad Khan",
+  name: "Danial",
   shortName: "Danial",
   role: "AI Video Creator",
   headline: "Bringing Ideas to Life with AI",

@@ -1,4 +1,4 @@
-# Danial Ahmad Khan — AI Video Creator Portfolio
+# Danial — AI Video Creator Portfolio
 
 A static, dependency-free portfolio site (HTML + CSS + vanilla JS). Host it anywhere that serves static files: Amazon S3, Netlify, Vercel, GitHub Pages, and so on.
 

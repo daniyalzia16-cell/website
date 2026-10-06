@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Daniayal Ahmad Khan — AI Video Creator
+   Danial — AI Video Creator
    ========================================================================== */
 
 :root {
@@ -1662,7 +1662,7 @@ body.is-loaded .preloader__inner {
   }
 
   .hero__name {
-    font-size: clamp(42px, 13vw, 80px);
+    font-size: clamp(56px, 20vw, 110px);
   }
 
   .hero__sep {
