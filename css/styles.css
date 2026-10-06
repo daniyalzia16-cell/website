@@ -512,8 +512,36 @@ body.is-loaded .preloader__inner {
 }
 
 .hero__fallback {
-  background: radial-gradient(ellipse at 50% 120%, #1a1033, var(--bg) 70%);
+  background: radial-gradient(ellipse at 50% 110%, #2a1656, #120c24 45%, var(--bg) 85%);
   overflow: hidden;
+}
+
+/* Animated perspective grid, visible when no hero video is set */
+.hero__grid {
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: -10%;
+  height: 75%;
+  background-image:
+    linear-gradient(rgba(167, 139, 250, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.28) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transform: perspective(500px) rotateX(62deg);
+  transform-origin: center top;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 45%, #000 100%);
+  animation: gridMove 6s linear infinite;
+  opacity: 0;
+  transition: opacity 1.5s var(--ease);
+}
+
+.hero--fallback .hero__grid {
+  opacity: 1;
+}
+
+@keyframes gridMove {
+  to { background-position: 0 64px, 0 0; }
 }
 
 .orb {
@@ -522,6 +550,19 @@ body.is-loaded .preloader__inner {
   filter: blur(70px);
   opacity: 0.55;
   will-change: transform;
+}
+
+.hero--fallback .orb {
+  opacity: 0.85;
+}
+
+.orb--4 {
+  width: 30vmax;
+  height: 30vmax;
+  right: 15%;
+  bottom: 5%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.6), transparent 65%);
+  animation: float2 19s ease-in-out infinite alternate-reverse;
 }
 
 .orb--1 {
@@ -563,6 +604,12 @@ body.is-loaded .preloader__inner {
     linear-gradient(180deg, rgba(7, 7, 11, 0.55) 0%, rgba(7, 7, 11, 0.1) 30%, rgba(7, 7, 11, 0.35) 60%, var(--bg) 100%),
     linear-gradient(90deg, rgba(7, 7, 11, 0.7) 0%, rgba(7, 7, 11, 0.25) 55%, transparent 100%),
     radial-gradient(ellipse at center, transparent 40%, rgba(7, 7, 11, 0.6) 100%);
+}
+
+.hero--fallback .hero__shade {
+  background:
+    linear-gradient(180deg, rgba(7, 7, 11, 0.35) 0%, transparent 25%, transparent 70%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(7, 7, 11, 0.45) 0%, transparent 60%);
 }
 
 .hero__content {

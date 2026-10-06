@@ -108,6 +108,8 @@
 
     if (!video) return;
     if (!sources.length) {
+      // No showreel configured yet: show the animated gradient background instead.
+      $(".hero").classList.add("hero--fallback");
       video.remove();
       if (soundBtn) soundBtn.hidden = true;
       return;
@@ -123,7 +125,10 @@
       if (!reduceMotion) safePlay(video);
       ready();
     }, { once: true });
-    video.addEventListener("error", function () { video.remove(); }, true);
+    video.addEventListener("error", function () {
+      $(".hero").classList.add("hero--fallback");
+      video.remove();
+    }, true);
 
     // Pause hero video when it scrolls out of view to save resources.
     if ("IntersectionObserver" in window) {
